@@ -1,6 +1,4 @@
-/**
- * Created by abhinay on 12/1/15.
- */
+
 
 var values = document.getElementsByName('screen')
 for (var i=0,max=values.length; i<max; i++) {
@@ -26,19 +24,29 @@ function gotoSecond() {
 function gotoThird() {
     try {
       //  values[2].focus();
-        window.scrollBy(0, 900);
+        shrinkWeightVector2();
+        setTimeout(scrollThird,900);
+
 
     }catch(e){ console.log("Error! ", e); }
 
 }
 
+function scrollThird(){
+    window.scrollBy(0, 900);
+    expandWeightvector3();
+}
 function gotoFourth() {
     try {
-        window.scrollBy(0, 800);
+        shrinklWeightvectorBest3();
+        setTimeout(scrollFourth,900);
     }catch(e){ console.log("Error! ", e); }
 
 }
-
+function scrollFourth(){
+    window.scrollBy(0, 800);
+    expandWeightvector4();
+}
 function goBack(){
 
     window.scrollBy(0, -800);
